@@ -57,7 +57,6 @@
       private load: boolean = true;
 
       private readFile(e: any) {
-          console.log('e', e);
           const file = e.target.files[0];
           document.getElementById(`${e.target.id}-file-name`)!.innerHTML = e.target.files[0].name;
           if (!file) {
@@ -65,8 +64,7 @@
           }
           const reader = new FileReader();
           reader.onload = ( el: any) => {
-              // const info = JSON.parse(el.target.result);
-              const info = el.target.result;
+              const info = JSON.parse(el.target.result);
               localStorage.setItem(e.target.id, info);
               this.checkAllFiles();
           };
@@ -84,10 +82,8 @@
           if (localStorage.getItem('token') === null || localStorage.getItem('branding') === null ) {
               this.checkFile('token');
               this.checkFile('branding');
-              console.log('files');
           } else {
               this.load = false;
-              console.log('no');
           }
       }
 
