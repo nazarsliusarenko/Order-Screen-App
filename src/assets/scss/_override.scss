@@ -1,0 +1,219 @@
+$primary: #a0bf5f;
+$primary-dark: #81984f;
+$text: #5f5e5e;
+$text-light: rgba(95, 94, 94, 0.6);
+
+@font-face {
+  font-family: 'dinBold';
+  src: url('~@/assets/fonts/DINNextLTPro-Bold.otf') format('opentype');
+}
+@font-face {
+  font-family: 'dinMedium';
+  src: url('~@/assets/fonts/DINNextLTPro-Medium.otf') format('opentype');
+}
+@font-face {
+  font-family: 'dinRegular';
+  src: url('~@/assets/fonts/DINNextLTPro-Regular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'handBlack';
+  src: url('~@/assets/fonts/TheHandBlack.otf') format('opentype');
+}
+@font-face {
+  font-family: 'handExtra';
+  src: url('~@/assets/fonts/TheHandExtrablack.otf') format('opentype');
+}
+@font-face {
+  font-family: 'handBold';
+  src: url('~@/assets/fonts/TheHandBold.otf') format('opentype');
+}
+@font-face {
+  font-family: 'handRegular';
+  src: url('~@/assets/fonts/TheHandRegular.otf') format('opentype');
+}
+#app {
+  color: $text;
+  font-family: 'dinRegular';
+  letter-spacing: -0.4px;
+}
+h1 {
+  color: $text;
+  text-transform: uppercase;
+  font-family: 'dinMedium';
+  font-weight: $font-regular;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: center;
+}
+h2 {
+  padding-top: 2vw;
+  font-family: 'handBold';
+  text-transform: uppercase;
+  font-size: 4.81vw;
+  line-height: 1.15;
+  letter-spacing: 0.39vw;
+  color: $primary;
+}
+.welcome {
+  .option-btn {
+    font-family: 'handBold';
+    font-size: 4.81vw;
+    text-transform: uppercase;
+    line-height: 1.15;
+    letter-spacing: 0.39vw;
+    text-align: center;
+    span {
+      margin-top: -1vw;
+    }
+  }
+  .lang-btn {
+    font-family: 'dinMedium';
+    color: $text-light;
+    p {
+      margin: 0.3vw auto 0;
+    }
+    .img-holder {
+      display: none;
+    }
+    &:active {
+      color: $text;
+    }
+  }
+}
+.backdrop {
+  &--dark {
+    color: #fff;
+    border: $border-thin solid $primary-dark;
+    background: linear-gradient(to bottom, $primary, $primary-dark);
+    &:active {
+      background: linear-gradient(to bottom, #afc479, #95aa60);
+    }
+    &:disabled {
+      border: 0;
+      background: linear-gradient(to bottom, #dce5c4, #d5ddc0);
+    }
+  }
+}
+.checkout {
+  background: #fff; /* Old browsers */
+  background: -moz-linear-gradient(bottom, #fff 44%, transparent 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(bottom, #fff 44%,transparent 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to top, #fff 44%,transparent 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='transparent',GradientType=0 ); /* IE6-9 */
+  button {
+    text-transform: uppercase;
+    font-family: 'handBold';
+    font-size: 4.44vw;
+    line-height: 1.25;
+    letter-spacing: 0.36vw;
+    .price {
+      font-family: 'handRegular';
+      margin-top: 0;
+    }
+    span {
+      margin-top: -1vw;
+    }
+  }
+  &--cancel {
+    background-color: $background-default;
+    color: $text;
+    span {
+      margin-top: -1vw;
+    }
+  }
+}
+#home {
+  .categories {
+    &--category {
+      h4 {
+        font-family: 'dinMedium';
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        font-weight: $font-regular;
+        letter-spacing: -0.4px;
+      }
+    }
+    p {
+      text-transform: capitalize;
+      font-family: 'dinRegular';
+      letter-spacing: -0.4px;
+      text-align: center;
+    }
+  }
+  .product {
+    &--name {
+      text-transform: capitalize;
+      font-family: 'dinBold';
+    }
+    &--price {
+      text-transform: uppercase;
+    }
+  }
+}
+.modal {
+  h3 {
+    font-family: 'dinBold';
+    margin-top: 0;
+    color: $text;
+    text-transform: capitalize;
+    font-size: 3.15vw;
+  }
+  .checkout {
+    border-top: $border-thin solid rgba(95, 94, 94, 0.15);
+  }
+  .choose {
+    font-family: 'dinMedium';
+    span {
+      font-family: 'dinBold'
+    }
+  }
+  .option-list {
+    &--item {
+      font-family: 'dinBold';
+    }
+  }
+  .close {
+    border: $border-thin solid $line-default;
+  }
+}
+.cart {
+  .total {
+    padding-left: 0;
+    p {
+      margin-left: 1.76vw;
+    }
+  }
+  .pay, .back {
+    text-transform: uppercase;
+    font-family: 'handBold';
+    font-size: 4.44vw;
+    line-height: 1.25;
+    letter-spacing: 0.36vw;
+    span {
+      margin-top: -1vw;
+    }
+  }
+  .back {
+    color: $text;
+  }
+}
+.confirm {
+  button {
+    text-transform: uppercase;
+    font-family: 'handBold';
+    font-size: 4.44vw;
+    line-height: 1.25;
+    letter-spacing: 0.36vw;
+    span {
+      margin-top: -1vw;
+    }
+  }
+}
+.payment {
+  svg {
+    fill: $primary;
+  }
+}

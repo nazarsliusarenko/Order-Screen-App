@@ -1,0 +1,127 @@
+.orders{
+  &__preparing{
+    width: 33.34vw;
+    &__title{
+      padding: 1.2vw 0 1.355vw 4.271vw;
+      background-color: $preparing-title-background;
+      max-height: 6.433vw;
+      h2{
+        font: $preparing-title;
+        letter-spacing: $preparing-title-spacing;
+        text-transform: $preparing-title-transform;
+        color: $preparing-title-color;
+      }
+    }
+    &__list{
+      padding: 3.125vw 4.167vw;
+      background-color: $preparing-numbers-background;
+      height: 49.792vw;
+      span{
+        font: $preparing-numbers;
+        letter-spacing: $preparing-numbers-spacing;
+        text-transform: $preparing-numbers-transform;
+        color: $preparing-numbers-color;
+        margin-bottom: 0.8854vw;
+        &:nth-child(n+7) {
+          text-align: right;
+        }
+        &:nth-child(6n){
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  &__pickup{
+    width: 66.66vw;
+    &__title{
+      padding: 1.2vw 0 1.355vw 4.271vw;
+      background-color: $ready-title-background;
+      max-height: 6.433vw;
+      h2{
+        font: $ready-title;
+        letter-spacing: $ready-title-spacing;
+        text-transform: $ready-title-transform;
+        color: $ready-title-color;
+      }
+    }
+    &__list{
+      padding: 2.448vw 4.167vw;
+      box-shadow: $ready-numbers-shadow;
+      background-color: $ready-numbers-background;
+      height: 49.792vw;
+      span{
+        font: $ready-numbers;
+        letter-spacing: $ready-numbers-spacing;
+        text-transform: $ready-numbers-transform;
+        color: $ready-numbers-color;
+        margin-bottom: 1.05vw;
+        margin-right: 4.688vw;
+        &:nth-child(n+9) {
+          margin-right: 0;
+        }
+        &:nth-child(4n){
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+.button-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: #e0dddd;
+  .input-wrapper{
+    &:first-of-type{
+      input{
+        &::before {
+          content: 'Select token file';
+        }
+      }
+    }
+    &:last-of-type{
+      input{
+        &::before {
+          content: 'Select branding file';
+        }
+      }
+    }
+  }
+  input {
+    color: transparent;
+    width: 230px;
+    margin: 0 20px;
+  }
+  input::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  input::before {
+    color: black;
+    display: inline-block;
+    background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 15px 30px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 20px;
+  }
+  input:hover::before {
+    border-color: black;
+  }
+  input:active {
+    outline: 0;
+  }
+  input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+  }
+  span{
+    text-align: center;
+    font-size: 25px;
+  }
+}
