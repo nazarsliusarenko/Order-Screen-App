@@ -1,6 +1,6 @@
 <template>
   <div
-    :style="cssProps"
+    :style="this.cssProps()"
     id="app">
     <router-view />
   </div>
@@ -17,15 +17,17 @@
     public name = 'app';
     private config: Config = brandingConfig;
 
-    get cssProps() {
+    private cssProps() {
+      const branding = JSON.parse(localStorage.getItem('branding')!);
       try {
-        return this.generateCss(this.config);
+        return this.generateCss(JSON.parse(branding));
       } catch (err) {
+        console.log('err', err);
         return this.generateCss(brandingConfig);
       }
     }
 
-    private generateCss(config: Config) {
+    private generateCss(config: any) {
       return {
         '--preparing_title': this.generateFont(config.preparing_title),
         '--preparing_title_transform': config.preparing_title_transform,
