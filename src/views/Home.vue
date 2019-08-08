@@ -35,7 +35,7 @@
             </div>
         </div>
     <div class="button-container" v-else>
-        <div class="input-wrapper">
+        <div class="input-wrapper d-flex column">
             <input type="file" id="token" name="file-token" />
             <span id="token-file-name"></span>
         </div>
