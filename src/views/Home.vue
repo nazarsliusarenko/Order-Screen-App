@@ -65,7 +65,6 @@
           const reader = new FileReader();
           reader.onload = ( el: any) => {
               const info = JSON.stringify(el.target.result);
-              console.log('info', info);
               localStorage.setItem(e.target.id, info);
               this.checkAllFiles();
           };
